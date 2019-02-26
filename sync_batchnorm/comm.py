@@ -8,7 +8,7 @@
 # https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
 # Distributed under MIT License.
 
-import queue
+import Queue
 import collections
 import threading
 
@@ -71,7 +71,7 @@ class SyncMaster(object):
             master_callback: a callback to be invoked after having collected messages from slave devices.
         """
         self._master_callback = master_callback
-        self._queue = queue.Queue()
+        self._queue = Queue.Queue()
         self._registry = collections.OrderedDict()
         self._activated = False
 
